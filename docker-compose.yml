@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  sound-to-art:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./history:/app/history
+      - ./db:/app/db 
