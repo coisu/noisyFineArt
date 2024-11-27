@@ -2,6 +2,7 @@ DOCKER_COMPOSE = docker-compose
 PYTHON = python3
 DB_INIT_SCRIPT = db_init.py
 SERVICE_NAME = noisy-art
+DB_FILE = db/history.db
 
 all: build up
 
@@ -24,7 +25,16 @@ build: decrypt-mama
 	@echo "Building Docker image..."
 	$(DOCKER_COMPOSE) build
 
-up:
+check-db:
+	@echo "Checking if database exists..."
+	@if [ ! -f $(DB_FILE) ]; then \
+		echo "Database not found. Initializing..."; \
+		$(MAKE) init-db; \
+	else \
+		echo "Database already exists. Skipping initialization."; \
+	fi
+
+up: check-db
 	@echo "Starting Docker container..."
 	$(DOCKER_COMPOSE) up -d
 
@@ -45,15 +55,15 @@ test:
 fclean:
 	@echo "Force cleaning up..."
 	sudo rm -rf history
-	sudo rm -rf db/history.db
+	sudo rm -rf $(DB_FILE)
 	$(DOCKER_COMPOSE) down --volumes --remove-orphans || true
 
 reset-db:
 	@echo "Resetting the database..."
-	rm -rf db/history.db
-	make init-db
+	rm -rf $(DB_FILE)
+	$(MAKE) init-db
 
 decrypt-mama:
 	gpg -d -o .env .env.gpg
 
-.PHONY: help init-db build up down logs test clean reset-db decrypt-mama
+.PHONY: help init-db build up down logs test clean reset-db decrypt-mama check-db
