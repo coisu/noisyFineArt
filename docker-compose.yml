@@ -1,10 +1,14 @@
-version: "3.9"
+version: '3.8'
 services:
-  sound-to-art:
+  noisy-art:
     build:
       context: .
+    environment:
+      - OPENAI_API_KEY
+    env_file:
+      - .env
+    volumes:
+      - ./db:/app/db
+      - ./history:/app/history
     ports:
       - "5000:5000"
-    volumes:
-      - ./history:/app/history
-      - ./db:/app/db 
