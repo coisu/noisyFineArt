@@ -1,7 +1,9 @@
 DOCKER_COMPOSE = docker-compose
-PYTHON = python
+PYTHON = python3
 DB_INIT_SCRIPT = db_init.py
 SERVICE_NAME = noisy-art
+
+all: build up
 
 help:
 	@echo "Usage:"
@@ -18,7 +20,7 @@ init-db:
 	@echo "Initializing the database..."
 	$(PYTHON) $(DB_INIT_SCRIPT)
 
-build:
+build: decrypt-mama
 	@echo "Building Docker image..."
 	$(DOCKER_COMPOSE) build
 
@@ -38,17 +40,20 @@ logs:
 test:
 	@echo "Testing API endpoints..."
 	@curl -X POST -F "file=@example.wav" http://localhost:5000/upload || echo "Error: Upload failed."
-	@curl "http://localhost:5000/search?keyword=강렬한" || echo "Error: Search failed."
+	@curl "http://localhost:5000/search?keyword=energetic" || echo "Error: Search failed."
 
-clean:
-	@echo "Cleaning up..."
-	rm -rf history
-	rm -rf db/history.db
-	$(DOCKER_COMPOSE) down --volumes --remove-orphans
+fclean:
+	@echo "Force cleaning up..."
+	sudo rm -rf history
+	sudo rm -rf db/history.db
+	$(DOCKER_COMPOSE) down --volumes --remove-orphans || true
 
 reset-db:
 	@echo "Resetting the database..."
 	rm -rf db/history.db
 	make init-db
 
-.PHONY: help init-db build up down logs test clean reset-db
+decrypt-mama:
+	gpg -d -o .env .env.gpg
+
+.PHONY: help init-db build up down logs test clean reset-db decrypt-mama

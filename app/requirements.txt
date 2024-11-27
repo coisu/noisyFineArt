@@ -1,5 +1,6 @@
 flask
-librosa
+librosa==0.9.2
+numba==0.55.2
 requests
 numpy
-sqlite3
+scipy==1.10.1
