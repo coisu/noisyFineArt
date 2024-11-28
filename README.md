@@ -106,6 +106,32 @@ Force cleanup of generated files and containers:
 ```
 
 
+## Project Results Examples
+  For more test results and examples, please refer to the [tested_srcs](tested_srcs/) directory in this repository. This directory contains detailed outputs for each sound file, including audio files, prompts, and generated images.
+
+### Input Sound Files
+- [Old TV Sound](tested_srcs/000027/noise.wav)
+- [Rain Sound](tested_srcs/000002/noise.wav)
+
+
+### Output Image
+#### Old TV
+- Extracted Prompts:
+  ```
+  "An abstract art piece inspired by balanced distribution, steady rhythm, focused and linear, gentle and smooth, experimental"
+  ```
+  
+![Old TV Sound Visualized](tested_srcs/000027/result_image.png)
+
+#### Rain
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, steady rhythm, neutral tone, crisp and vibrant, impressionism"
+```
+
+![Rain Sound Visualized](tested_srcs/000002/result_image.png)
+
+
 ---
 
 ## Future Work
