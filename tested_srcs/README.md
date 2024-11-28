@@ -39,4 +39,92 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
   - **`prompt.txt`**: The generated prompt describing the visual representation.
   - **`result_image.png`**: The AI-generated artwork based on the audio features.
 
+## Results
+
+#### Rain
+- [Rain Sound](https://coisu.github.io/noisyFineArt/2/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, steady rhythm, neutral tone, crisp and vibrant, impressionism"
+```
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="000001/result_image.png" alt="Rain Sound Visualized 1" width="45%">
+  <img src="000002/result_image.png" alt="Rain Sound Visualized 2" width="45%">
+</div>
+
+#### Whistle
+- [Whistle Sound](https://coisu.github.io/noisyFineArt/4/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, steady rhythm, focused and linear, gentle and smooth, experimental"
+```
+<div style="display: flex; justify-content: space-around;">
+  <img src="000005/result_image.png" alt="Whistle Sound Visualized 1" width="45%">
+  <img src="000006/result_image.png" alt="Whistle Sound Visualized 2" width="45%">
+</div>
+
+#### Stairs
+- [Stairs Sound](https://coisu.github.io/noisyFineArt/5/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, slow yet textured, soft and serene, heavy and full-bodied, experimental"
+```
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="000008/result_image.png" alt="Stairs Sound Visualized 1" width="45%">
+  <img src="000009/result_image.png" alt="Stairs Sound Visualized 2" width="45%">
+</div>
+
+#### ATM
+- [ATM Sound](https://coisu.github.io/noisyFineArt/6/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, fast but sparse, soft and serene, gentle and smooth, experimental"
+```
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="000011/result_image.png" alt="ATM Sound Visualized 1" width="45%">
+  <img src="000012/result_image.png" alt="ATM Sound Visualized 2" width="45%">
+</div>
+
+
+#### Beating Egg
+- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/3/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, intense and rhythmic, focused and linear, gentle and smooth, neo-impressionism Pointillism"
+```
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="000014/result_image.png" alt="Beating Egg Sound Visualized 1" width="45%">
+  <img src="000015/result_image.png" alt="Beating Egg Sound Visualized 2" width="45%">
+</div>
+
+#### Cafe
+- [Cafe Sound](https://coisu.github.io/noisyFineArt/7/)
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by broad and textured, steady rhythm, soft and serene, evenly distributed, gentle and smooth, post-impressionism"
+```
+
+<div style="display: flex; justify-content: space-around;">
+  <img src="000016/result_image.png" alt="Cafe Sound Visualized 1" width="45%">
+  <img src="000017/result_image.png" alt="Cafe Sound Visualized 2" width="45%">
+</div>
+
+
+#### Old TV
+- [Old TV Sound](https://coisu.github.io/noisyFineArt/1/)
+- Extracted Prompts:
+  ```
+  "An abstract art piece inspired by balanced distribution, steady rhythm, focused and linear, gentle and smooth, experimental"
+  ```
+  
+<div style="display: flex; justify-content: space-around;">
+  <img src="000027/result_image.png" alt="TV Sound Visualized 1" width="45%">
+  <img src="000026/result_image.png" alt="TV Sound Visualized 2" width="45%">
+</div>
+
+
 
