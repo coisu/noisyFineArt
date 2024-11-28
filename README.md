@@ -110,8 +110,9 @@ Force cleanup of generated files and containers:
   For more test results and examples, please refer to the [tested_srcs](tested_srcs/) directory in this repository. This directory contains detailed outputs for each sound file, including audio files, prompts, and generated images.
 
 ### Input Sound Files
-- [Old TV Sound](tested_srcs/000027/noise.wav)
-- [Rain Sound](tested_srcs/000002/noise.wav)
+- [Old TV Sound](https://coisu.github.io/noisyFineArt/1/)
+- [Rain Sound](https://coisu.github.io/noisyFineArt/2/)
+- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/3/)
 
 
 ### Output Image
@@ -130,6 +131,14 @@ Force cleanup of generated files and containers:
 ```
 
 ![Rain Sound Visualized](tested_srcs/000002/result_image.png)
+
+#### Beating Egg
+- Extracted Prompts:
+```
+  "An abstract art piece inspired by balanced distribution, intense and rhythmic, focused and linear, gentle and smooth, neo-impressionism Pointillism"
+```
+
+![Rain Sound Visualized](tested_srcs/000015/result_image.png)
 
 
 ---
