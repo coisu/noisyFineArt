@@ -42,7 +42,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 ## Results
 
 #### Rain
-- [Rain Sound](https://coisu.github.io/noisyFineArt/2/)
+- [Rain Sound](https://coisu.github.io/noisyFineArt/sounds/2/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by balanced distribution, steady rhythm, neutral tone, crisp and vibrant, impressionism"
@@ -54,7 +54,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 </div>
 
 #### Whistle
-- [Whistle Sound](https://coisu.github.io/noisyFineArt/4/)
+- [Whistle Sound](https://coisu.github.io/noisyFineArt/sounds/4/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by balanced distribution, steady rhythm, focused and linear, gentle and smooth, experimental"
@@ -65,7 +65,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 </div>
 
 #### Stairs
-- [Stairs Sound](https://coisu.github.io/noisyFineArt/5/)
+- [Stairs Sound](https://coisu.github.io/noisyFineArt/sounds/5/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by balanced distribution, slow yet textured, soft and serene, heavy and full-bodied, experimental"
@@ -77,7 +77,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 </div>
 
 #### ATM
-- [ATM Sound](https://coisu.github.io/noisyFineArt/6/)
+- [ATM Sound](https://coisu.github.io/noisyFineArt/sounds/6/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by balanced distribution, fast but sparse, soft and serene, gentle and smooth, experimental"
@@ -90,7 +90,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 
 
 #### Beating Egg
-- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/3/)
+- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/sounds/3/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by balanced distribution, intense and rhythmic, focused and linear, gentle and smooth, neo-impressionism Pointillism"
@@ -102,7 +102,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 </div>
 
 #### Cafe
-- [Cafe Sound](https://coisu.github.io/noisyFineArt/7/)
+- [Cafe Sound](https://coisu.github.io/noisyFineArt/sounds/7/)
 - Extracted Prompts:
 ```
   "An abstract art piece inspired by broad and textured, steady rhythm, soft and serene, evenly distributed, gentle and smooth, post-impressionism"
@@ -115,7 +115,7 @@ Each result file is named using a **6-digit numeric format**, corresponding to t
 
 
 #### Old TV
-- [Old TV Sound](https://coisu.github.io/noisyFineArt/1/)
+- [Old TV Sound](https://coisu.github.io/noisyFineArt/sounds/1/)
 - Extracted Prompts:
   ```
   "An abstract art piece inspired by balanced distribution, steady rhythm, focused and linear, gentle and smooth, experimental"
