@@ -110,9 +110,9 @@ Force cleanup of generated files and containers:
   For more test results and examples, please refer to the [tested_srcs](tested_srcs/) directory in this repository. This directory contains detailed outputs for each sound file, including audio files, prompts, and generated images.
 
 ### Input Sound Files
-- [Old TV Sound](https://coisu.github.io/noisyFineArt/1/)
-- [Rain Sound](https://coisu.github.io/noisyFineArt/2/)
-- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/3/)
+- [Old TV Sound](https://coisu.github.io/noisyFineArt/sounds/1/)
+- [Rain Sound](https://coisu.github.io/noisyFineArt/sounds/2/)
+- [Beating Egg Sound](https://coisu.github.io/noisyFineArt/sounds/3/)
 
 
 ### Output Image
