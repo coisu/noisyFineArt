@@ -50,112 +50,226 @@ def analyze_sound(file_path):
     return features
 
 # Generate keywords based on features
-def generate_keywords(features):
-    keywords = []
+# def generate_keywords(features):
+#     keywords = []
+    
+#     # ZCR-based keywords
+#     if features["zero_crossing_rate"] > 0.3:
+#         keywords.append("sharp and sizzling")
+#     elif features["zero_crossing_rate"] < 0.1:
+#         keywords.append("muted and dull")
 
-    # Tempo-based keywords considering onset density
-    rhythm = [
-        "subdued",
-        "calm",
-        "active",
-        "highly dynamic"
-    ]
 
-    # 템포와 점수 매핑
-    if features["tempo"] < 60:
-        index = 0
-    elif 60 <= features["tempo"] < 90:
-        index = 1
-    elif 90 <= features["tempo"] < 150:
-        index = 2
-    else:
-        index = 3
+#     # Loudness-based keywords
+#     if features["loudness"] < 0.01:
+#         keywords.append("whispering tones")
+#     elif features["loudness"] > 0.05:
+#         keywords.append("resonant and bold")
 
-    # 온셋 밀도와 점수 매핑
-    if features["onset_density"] < 5:
-        if index > 0:
-            index -= int(index // 2)  # 정수 변환
-    elif 5 <= features["onset_density"] < 10:
-        if index > 1:
-            index -= int((index - 1) // 2)  # 정수 변환
-        else:
-            index += 1
-    elif 10 <= features["onset_density"] < 15:
-        if index > 2:
-            index -= int((index - 2) // 2)  # 정수 변환
-        elif index < 2:
-            index += int((2 - index) // 2)  # 정수 변환
-    else:
-        if index < 3:
-            index += int((3 - index) // 2)  # 정수 변환
+#     # Tempo-based keywords considering onset density
+#     rhythm = [
+#         "subdued",
+#         "calm",
+#         "active",
+#         "highly dynamic"
+#     ]
 
-    # 최종 키워드 추가
-    keywords.append(rhythm[index])
+#     # 템포와 점수 매핑
+#     if features["tempo"] < 60:
+#         index = 0
+#     elif 60 <= features["tempo"] < 90:
+#         index = 1
+#     elif 90 <= features["tempo"] < 150:
+#         index = 2
+#     else:
+#         index = 3
+
+#     # 온셋 밀도와 점수 매핑
+#     if features["onset_density"] < 5:
+#         if index > 0:
+#             index -= int(index // 2)  # 정수 변환
+#     elif 5 <= features["onset_density"] < 10:
+#         if index > 1:
+#             index -= int((index - 1) // 2)  # 정수 변환
+#         else:
+#             index += 1
+#     elif 10 <= features["onset_density"] < 15:
+#         if index > 2:
+#             index -= int((index - 2) // 2)
+#         elif index < 2:
+#             index += int((2 - index) // 2)
+#     else:
+#         if index < 3:
+#             index += int((3 - index) // 2)
+
+#     # 최종 키워드 추가
+#     keywords.append(rhythm[index])
 
 
     
-    # if features["tempo"] < 60:
-    #     if features["onset_density"] < 5:
-    #         keywords.append("subdued")  # 매우 차분한
-    #     else:
-    #         keywords.append("gentle movement")  # 부드럽게 움직이는
-    # elif 60 <= features["tempo"] < 90:
-    #     if features["onset_density"] < 10:
-    #         keywords.append("calm")  # 차분한
-    #     else:
-    #         keywords.append("flowing")  # 유동적인
-    # elif 90 <= features["tempo"] < 150:
-    #     if features["onset_density"] < 15:
-    #         keywords.append("active")  # 활발한
-    #     else:
-    #         keywords.append("energetic rhythm")  # 에너지 넘치는 리듬
-    # else:
-    #     if features["onset_density"] < 20:
-    #         keywords.append("highly dynamic")  # 매우 역동적인
-    #     else:
-    #         keywords.append("intense motion")  # 강렬한 움직임
+#     # if features["tempo"] < 60:
+#     #     if features["onset_density"] < 5:
+#     #         keywords.append("subdued")  # 매우 차분한
+#     #     else:
+#     #         keywords.append("gentle movement")  # 부드럽게 움직이는
+#     # elif 60 <= features["tempo"] < 90:
+#     #     if features["onset_density"] < 10:
+#     #         keywords.append("calm")  # 차분한
+#     #     else:
+#     #         keywords.append("flowing")  # 유동적인
+#     # elif 90 <= features["tempo"] < 150:
+#     #     if features["onset_density"] < 15:
+#     #         keywords.append("active")  # 활발한
+#     #     else:
+#     #         keywords.append("energetic rhythm")  # 에너지 넘치는 리듬
+#     # else:
+#     #     if features["onset_density"] < 20:
+#     #         keywords.append("highly dynamic")  # 매우 역동적인
+#     #     else:
+#     #         keywords.append("intense motion")  # 강렬한 움직임
 
-    # Bandwidth-based keywords
-    if features["bandwidth"] > 2000:
-        keywords.append("sharp")
-    else:
-        keywords.append("dull")
+#     # Bandwidth and frequency-based keywords
+#     if features["bandwidth"] > 3000 and features["frequency"] < 3000:
+#         keywords.append("spacious")
+#     elif 2000 <= features["bandwidth"] <= 4000 and 3000 <= features["frequency"] <= 6000:
+#         keywords.append("balanced")
+#     elif features["bandwidth"] < 2000 and features["frequency"] > 5000:
+#         keywords.append("speckled and fizzing")
+#     elif features["bandwidth"] > 4000 and features["frequency"] > 5000:
+#         keywords.append("even distribution")
+#     else:
+#         keywords.append("neutral")
 
-    # Touch size keywords: onset density
-    if features["onset_density"] > 20:
-        keywords.append("fine touch")
-    elif 10 < features["onset_density"] <= 20:
-        keywords.append("medium touch")
-    else:
-        keywords.append("broad touch")
 
-    # ZCR-based keywords
-    if features["zero_crossing_rate"] > 0.1:
-        keywords.append("crisp")
-    else:
-        keywords.append("smooth")
+#     # # ZCR-based keywords
+#     # if features["zero_crossing_rate"] > 0.1:
+#     #     keywords.append("sharp")
+#     # else:
+#     #     keywords.append("muted tone and dull")  # 묵직한
 
-    # Style keywords
-    if features["tempo"] < 60 and features["bandwidth"] < 2000:
-        keywords.append("cubism")
-    elif 60 <= features["tempo"] < 100 and features["bandwidth"] < 3000:
-        keywords.append("de stijl")
-    elif 100 <= features["tempo"] < 150 and features["bandwidth"] >= 3000:
-        keywords.append("futurism")
-    elif features["tempo"] >= 150 and features["onset_density"] > 5:
-        keywords.append("neo-impressionism")
-    elif features["frequency"] > 5000 and features["zero_crossing_rate"] > 0.15:
-        keywords.append("abstract expressionism")
-    elif features["loudness"] < 0.02 and features["onset_density"] < 4:
-        keywords.append("minimalism")
-    elif features["loudness"] > 0.05 and features["bandwidth"] > 5000:
-        keywords.append("expressionism")
-    elif features["frequency"] < 4000 and features["tempo"] < 60:
-        keywords.append("romanticism")
+#     # Touch size keywords: onset density
+#     # if features["onset_density"] > 20:
+#     #     keywords.append("fine touch")
+#     # elif 10 < features["onset_density"] <= 20:
+#     #     keywords.append("medium touch")
+#     # else:
+#     #     keywords.append("broad touch")
+
+#     # Style keywords
+#     if features["tempo"] < 60 and features["bandwidth"] < 2000:
+#         keywords.append("cubism")
+#     elif 60 <= features["tempo"] < 100 and features["bandwidth"] < 3000:
+#         keywords.append("de stijl")
+#     elif 100 <= features["tempo"] < 150 and features["bandwidth"] >= 3000:
+#         keywords.append("futurism")
+#     elif features["tempo"] >= 150 and features["onset_density"] > 5:
+#         keywords.append("neo-impressionism")
+#     elif features["frequency"] > 5000 and features["zero_crossing_rate"] > 0.15:
+#         keywords.append("abstract expressionism")
+#     elif features["loudness"] < 0.02 and features["onset_density"] < 4:
+#         keywords.append("minimalism")
+#     elif features["loudness"] > 0.05 and features["bandwidth"] > 5000:
+#         keywords.append("expressionism")
+#     elif features["frequency"] < 4000 and features["tempo"] < 60:
+#         keywords.append("romanticism")
+#     else:
+#         keywords.append("experimental")
+
+#     return ", ".join(keywords)
+def generate_keywords(features):
+    """
+    Generates descriptive keywords based on multi-dimensional features of the audio file.
+    """
+    keywords = []
+
+    # Bandwidth and frequency relationship
+    if features["bandwidth"] > 4000 and features["frequency"] > 3000:
+        keywords.append("bright and expansive")  # Wide bandwidth, high frequency
+    elif features["bandwidth"] > 4000 and features["frequency"] < 2000:
+        keywords.append("wide but deep")  # Wide bandwidth, low frequency
+    elif features["bandwidth"] < 2300 and features["frequency"] > 4000:
+        keywords.append("focused and piercing")  # Narrow bandwidth, high frequency
+    elif features["bandwidth"] > 3500:
+        keywords.append("broad and textured")  # High bandwidth
     else:
-        keywords.append("experimental")
+        keywords.append("balanced distribution")  # Default
+
+    # Tempo and onset density relationship
+    if features["tempo"] > 150 and features["onset_density"] > 3:
+        keywords.append("intense and rhythmic")  # Fast tempo, high onset density
+    elif features["tempo"] > 150 and features["onset_density"] < 3:
+        keywords.append("fast but sparse")  # Fast tempo, low onset density
+    elif features["tempo"] < 90 and features["onset_density"] > 2.5:
+        keywords.append("slow yet textured")  # Slow tempo, high onset density
+    elif features["tempo"] < 60:
+        keywords.append("meditative and subdued")  # Very slow tempo
+    else:
+        keywords.append("steady rhythm")  # Default
+
+    # ZCR, bandwidth, and uniformity
+    if features["zero_crossing_rate"] > 0.25 and features["bandwidth"] > 4000:
+        keywords.append("sharp and sizzling")  # High ZCR and wide bandwidth
+    elif 0.1 < features["zero_crossing_rate"] <= 0.25:
+        keywords.append("focused and linear")  # Medium ZCR
+    elif features["zero_crossing_rate"] <= 0.1:
+        keywords.append("soft and serene")  # Low ZCR
+    else:
+        keywords.append("neutral tone")  # Default
+
+    if features["onset_density"] < 0.5 and features["zero_crossing_rate"] < 0.1:
+        keywords.append("evenly distributed")  # Very low density and ZCR
+    if features["onset_density"] > 4 and features["bandwidth"] > 3000:
+        keywords.append("dynamic and vibrant")  # High density and bandwidth
+
+    # Loudness and frequency
+    if features["loudness"] > 0.02 and features["frequency"] > 3000:
+        keywords.append("crisp and vibrant")  # High loudness and frequency
+    elif features["loudness"] > 0.02 and features["frequency"] < 2000:
+        keywords.append("heavy and full-bodied")  # High loudness, low frequency
+    elif features["loudness"] < 0.005 and features["frequency"] > 3000:
+        keywords.append("soft but bright")  # Low loudness, high frequency
+    elif features["loudness"] < 0.005:
+        keywords.append("whispery and ethereal")  # Very low loudness
+    else:
+        keywords.append("gentle and smooth")  # Default
+        
+    # New: Linearity and uniformity ("선적인" and "균일한")
+    if features["zero_crossing_rate"] < 0.05 and features["bandwidth"] < 2300:
+        keywords.append("linear and subtle")  # Narrow bandwidth, very low ZCR
+    elif features["zero_crossing_rate"] > 0.15 and features["onset_density"] < 1:
+        keywords.append("uniformly spaced")  # Low density, moderate ZCR
+
+    # Style-based keywords (refined without new keywords)
+    if features["frequency"] > 3000 and features["onset_density"] > 3:
+        keywords.append("neo-impressionism Pointillism")  # 높은 주파수와 높은 밀도
+    elif features["tempo"] < 90 and features["bandwidth"] < 2000 and features["frequency"] < 1500:
+        keywords.append("expressionism lively")  # 낮은 템포, 좁은 대역폭, 낮은 주파수
+    elif features["bandwidth"] > 3500 and features["frequency"] > 3000 and features["onset_density"] > 2:
+        keywords.append("abstract expressionism")  # 넓은 대역폭, 높은 주파수, 중간 이상의 밀도
+    elif features["onset_density"] > 2 and features["zero_crossing_rate"] > 0.3:
+        keywords.append("cubism")  # 느린 템포, 낮은 밀도, 낮은 주파수
+    elif features["tempo"] > 110 and features["bandwidth"] > 3500 and features["frequency"] > 2500:
+        keywords.append("post-impressionism")  # 빠른 템포, 넓은 대역폭, 중간 이상의 주파수
+    elif features["tempo"] > 100 and features["loudness"] > 0.02 and features["frequency"] > 2000:
+        keywords.append("impressionism")  # 빠른 템포, 높은 볼륨, 중간 이상의 주파수
+    elif features["onset_density"] > 3 and features["loudness"] < 0.015 and features["tempo"] > 150:
+        keywords.append("futurism")  # 높은 밀도, 낮은 볼륨, 빠른 템포
+    else:
+        # Adjust fallback conditions
+        if features["tempo"] > 120 and features["bandwidth"] > 3000 and features["frequency"] > 3000:
+            keywords.append("dynamic experimentation")  # 실험적이지만 특정 특성을 강조
+        # elif features["onset_density"] < 1 and features["loudness"] > 0.01 and features["bandwidth"] < 2500:
+        #     keywords.append("cubism")  # 낮은 볼륨과 중간 밀도
+        elif features["onset_density"] < 1 and features["bandwidth"] < 2000 and features["frequency"] < 2000:
+            keywords.append("minimalism")  # 대역폭과 주파수가 낮은 경우
+        else:
+            keywords.append("experimental")  # Default fallback
+
+
 
     return ", ".join(keywords)
+
+
 
 
 # Generate image with prompt
@@ -259,7 +373,7 @@ def upload_file():
         "job_id": job_id,
         "keywords": keywords,
         "features": features,
-        "image_url": image_url
+        # "image_url": image_url
     })
 
 @app.route("/search", methods=["GET"])
