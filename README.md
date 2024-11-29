@@ -19,7 +19,9 @@ This project processes natural, everyday noises (e.g., rain, whistling, old TV s
   - Tempo
   - Spectral centroid (frequency)
   - Onset density (rhythmic activity)
-  - Bandwidth and loudness  
+  - Bandwidth
+  - Loudness
+  - Zero crossing rate(ZCR)
 
 - **Dynamic Feature Mapping**  
   A custom framework translates sound features into artistic interpretations:
