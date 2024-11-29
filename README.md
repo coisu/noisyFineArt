@@ -144,14 +144,79 @@ Force cleanup of generated files and containers:
 
 
 ---
+## Future Improvements and Expansion Ideas
 
-## Future Work
+This project is a work in progress, with several planned improvements and exciting expansion opportunities. Below is a summary of potential developments:
 
-This project is continually evolving. Planned improvements include:
+### Improvement Areas
 
-1. **Refining feature extraction** to better reflect the nuances of natural, everyday sounds.
-2. **Direct visualization** of audio features without relying solely on AI image generators.
-3. **Improved multi-feature mappings** to enhance artistic interpretations.
-4. **Broader testing dataset**, incorporating more diverse natural sounds.
+1. **Refining the Keyword Extraction Logic**  
+   - Enhance the keyword generation algorithm to better capture unique sound characteristics.  
+   - Reduce redundancy and improve the diversity of generated keywords.  
+   - Reflect the nuances of natural, everyday sounds rather than focusing solely on music files.  
+
+2. **Developing an Independent Visualization Logic**  (detail below)
+   - Move away from reliance on external AI APIs by creating a custom visualization algorithm.  
+   - Strengthen the project’s identity by using data-driven pattern generation.  
+   - Implement direct visualization of audio features to connect auditory elements with visual outputs seamlessly.  
+
+3. **Mobile App Development**  (detail below)
+   - Build a new platform to capture moments in a unique way, integrating real-time sound analysis with interactive and shareable visuals.  
+   - See details in the Mobile App Development section below.  
+
+4. **Adjusting Feature Ranges**  
+   - Recalibrate thresholds for feature values (e.g., bandwidth, onset density) to better align with natural and everyday soundscapes.  
+   - Allow users to define custom ranges for flexible testing and creativity.  
+
+5. **Integrating Diverse Datasets**  
+   - Expand the range of tested sounds to include urban noise, natural environments, and industrial sounds.  
+   - Provide users with richer, more diverse experiences through a broader dataset.  
 
 ---
+
+### Independent Visualization Algorithm
+
+If developing a custom visualization algorithm, some potential approaches might include:
+
+1. **Data-Driven Graphics Generation**  
+   - Use mathematical transformations of audio features (e.g., frequency, amplitude, and tempo) to generate patterns, colors, and textures.  
+   - Example: Map high-frequency sounds to sharp geometric shapes, while low-frequency sounds create softer, rounded visuals.   
+
+2. **Layered Mapping**  
+   - Develop multi-layered visual compositions where each audio feature contributes to distinct elements of the art.  
+   - Example: Use tempo to guide structural layouts, loudness for color intensity, and frequency for fine details.  
+
+3. **User-Tunable Visualization**  
+   - Allow users to experiment with different styles and mapping rules.  
+   - Example: Provide an interface for adjusting how audio features correspond to visual elements.
+
+By leveraging such techniques, a standalone visualization solution would not only replace AI generators but also offer a distinct and personalized creative tool tailored to this project.
+
+
+
+### Mobile App Development: A Social Network for Sound and Visuals  
+#### Key Features:  
+- **Real-Time Sound Visualization**  
+  - Users can record and visualize their surrounding sounds, generating abstract art pieces instantly.  
+
+- **Interactive Media Experience**  
+  - Posts display sound-generated visuals paired with the original audio.  
+  - Interactive gestures like clicks or swipes reveal the original video or related content tied to the sound.  
+
+- **Short Moment Captions**  
+  - Users can add concise captions (under 100 characters) to each post, quickly describing or personalizing the moment.  
+
+- **Social Network Integration**  
+  - Create a global platform where users can share their sound-based artwork.  
+  - Follow friends, discover unique moments from others, and curate collections of visually enhanced everyday sounds.  
+
+#### Target Audience:  
+- **Travel Enthusiasts:** Capture and share unique soundscapes from various destinations.  
+- **Creative Minds:** Artists and designers seeking fresh inspiration through sound-driven visuals.  
+- **Casual Users:** Anyone interested in turning mundane moments into artistic expressions.  
+
+#### Example Use Cases:  
+- Document the essence of a bustling market or serene park in a visually creative format.  
+- Share unique sound-art moments with friends on a platform that values auditory and visual experiences equally.  
+- Explore a feed filled with abstract and original art, fostering creative connections through sound.  
+
