@@ -144,11 +144,11 @@ Force cleanup of generated files and containers:
 
 
 ---
-## Future Improvements and Expansion Ideas
+# Future Improvements and Expansion Ideas
 
 This project is a work in progress, with several planned improvements and exciting expansion opportunities. Below is a summary of potential developments:
 
-### Improvement Areas
+## Improvement Areas
 
 1. **Refining the Keyword Extraction Logic**  
    - Enhance the keyword generation algorithm to better capture unique sound characteristics.  
@@ -174,7 +174,7 @@ This project is a work in progress, with several planned improvements and exciti
 
 ---
 
-### Independent Visualization Algorithm
+## Independent Visualization Algorithm
 
 If developing a custom visualization algorithm, some potential approaches might include:
 
@@ -192,10 +192,10 @@ If developing a custom visualization algorithm, some potential approaches might 
 
 By leveraging such techniques, a standalone visualization solution would not only replace AI generators but also offer a distinct and personalized creative tool tailored to this project.
 
+---
 
-
-### Mobile App Development: A Social Network for Sound and Visuals  
-#### Key Features:  
+## Mobile App Development: A Social Network for Sound and Visuals  
+### Key Features:  
 - **Real-Time Sound Visualization**  
   - Users can record and visualize their surrounding sounds, generating abstract art pieces instantly.  
 
@@ -210,12 +210,12 @@ By leveraging such techniques, a standalone visualization solution would not onl
   - Create a global platform where users can share their sound-based artwork.  
   - Follow friends, discover unique moments from others, and curate collections of visually enhanced everyday sounds.  
 
-#### Target Audience:  
+### Target Audience:  
 - **Travel Enthusiasts:** Capture and share unique soundscapes from various destinations.  
 - **Creative Minds:** Artists and designers seeking fresh inspiration through sound-driven visuals.  
 - **Casual Users:** Anyone interested in turning mundane moments into artistic expressions.  
 
-#### Example Use Cases:  
+### Example Use Cases:  
 - Document the essence of a bustling market or serene park in a visually creative format.  
 - Share unique sound-art moments with friends on a platform that values auditory and visual experiences equally.  
 - Explore a feed filled with abstract and original art, fostering creative connections through sound.  
