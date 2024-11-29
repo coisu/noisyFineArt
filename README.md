@@ -1,18 +1,23 @@
 # noisyFineArt
 
-# Noisy Art: Transforming Sounds into Visuals
+### Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Test Output](#test-output)
+- [Future Improvements and Expansion Ideas](#future-improvements-and-expansion-ideas)
 
-**Noisy Art** is an experimental project aimed at transforming the everyday, natural sounds of life into visually compelling art. By analyzing features from audio recordings, the project bridges the auditory and visual domains, offering a fresh perspective on how sound can inspire creativity.
+# Introduction
+### Noisy Art: Transforming Sounds into Visuals
+
+**Noisy Art** is an innovative experimental project that transforms everyday, natural sounds into visually captivating art. By analyzing detailed acoustic features such as **tempo**, **frequency**, **onset density**, and **zero-crossing rate**, the project bridges the auditory and visual worlds, showcasing how sound can inspire creativity and artistic exploration.
+
+This project processes natural noises like **rain**, **whistling**, and **old TV static**, mapping these sounds to descriptive artistic attributes. These descriptors are visualized using advanced AI tools such as DALL-E, offering a fresh perspective on sound-inspired art.
 
 ---
 
-## Overview
-
-This project processes natural, everyday noises (e.g., rain, whistling, old TV static) and extracts detailed acoustic features such as **tempo**, **frequency**, **onset density**, and **zero-crossing rate**. These features are mapped to artistic descriptors, which are then visualized through advanced AI tools like DALL-E.
-
----
-
-## Key Features
+# Features
 
 - **Feature Extraction**  
   Utilizes Python libraries like `librosa` for analyzing acoustic properties:
@@ -72,10 +77,7 @@ This project processes natural, everyday noises (e.g., rain, whistling, old TV s
    make decrypt-mama
    ```
    
-
-   
-
-## Example Workflow
+### Example Workflow
 Build the Docker container:
 
 ```bash
@@ -108,7 +110,7 @@ Force cleanup of generated files and containers:
 ```
 
 
-## Project Results Examples
+## Test Output
   For more test results and examples, please refer to the [tested_srcs](tested_srcs/) directory in this repository. This directory contains detailed outputs for each sound file, including audio files, prompts, and generated images.
 
 ### Input Sound Files
@@ -218,5 +220,14 @@ By leveraging such techniques, a standalone visualization solution would not onl
 ### Example Use Cases:  
 - Document the essence of a bustling market or serene park in a visually creative format.  
 - Share unique sound-art moments with friends on a platform that values auditory and visual experiences equally.  
-- Explore a feed filled with abstract and original art, fostering creative connections through sound.  
+- Explore a feed filled with abstract and original art, fostering creative connections through sound.
+
+----
+### Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Test Output](#test-output)
+- [Future Improvements and Expansion Ideas](#future-improvements-and-expansion-ideas)
 
